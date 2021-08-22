@@ -4,7 +4,7 @@
 <img src="../../assets/images/hardees.jpg " class="bg-center bg-no-repeat"  style="width:100%; height:600px;" alt="">
 
 </section>
-<section class="w-full h-36 bg-white   ">
+<section class="w-full h-36 bg-white shadow-lg   ">
 <div class="pt-2 px-32 flex items-center justify-between space-x-20 ">
 <div class="flex space-x-2 items-center">
     <!--logo restaurant-->
@@ -35,14 +35,14 @@
           <div>
               <div class="flex space-x-2">
                   <img src="../../assets/images/map.png" alt="">
-                  <p class="font-Poppins text-lg text-gray-400">Street 5, Oaxaca, Sonora Mexico - 54000</p>
+                  <p class="font-Poppins text-lg text-gray-400">Street 5, Dakar-Plateux - 54000</p>
               </div>
           </div>
     </div>
 
 
 </div>
-<select class="w-52 h-full border font-Source font-bold bg-yellow-300  rounded px-3 py-3 outline-none">
+<select class="w-52 h-full border font-Source font-bold bg-coloré  rounded px-3 py-3 outline-none">
   <option class="pt-3 font-bold font-Source"> Monday 12h-13h15</option>
   <option class="py-3 font-bold font-Source"> Saturday 12h-13h15</option>
   <option class="py-3 font-bold font-Source"> Jeudi 12h-13h15</option>
@@ -51,4 +51,222 @@
   <option class="py-3 font-bold font-Source"> Saturday 12h-13h15</option>
   </select>
 </div>
+</section>
+<section class="w-full h-auto  py-3 bg-back ">
+  <div class="grid grid-cols-3 gap-9  " >
+      <div class="col-span-2 flex-col pl-24 flex h-xl space-y-5 ">
+        <mat-sidenav-container class="w-full h-full  rounded-md " style="background-color: white;">
+          <mat-sidenav  class="pr-5  " mode="side" style="background-color: white; height:150 px;"  opened>
+            <mat-nav-list style="margin-top: 25px; " >
+              <a (click)="cat()" ><mat-list-item style="font-weight: 600; font-style: normal; color: #000;  "  >Menu</mat-list-item></a>
+              <a (click)="rev()"><mat-list-item style="font-weight: 600; font-style: normal; color: #000;  " >Reviews</mat-list-item></a>
+              <a (click)="rest()"><mat-list-item style="font-weight: 600; font-style: normal; color: #000;  " >Restaurant info</mat-list-item></a>
+            </mat-nav-list>
+            <div class=" pt-9 px-12 bg-back">
+
+            </div>
+            <div class=" pt-9 pr-3 bg-back" >
+              <img src="../../assets/images/sd.png" style="width: 300px; height: 500px;" alt="">
+            </div>
+            <div class="h-lga  bg-back ">
+
+            </div>
+          </mat-sidenav>
+          <mat-sidenav-content class="pl-7 bg-white h-full">
+            <ng-container *ngIf="catvar==true"
+             [ngTemplateOutlet]="pardefaut">
+
+          </ng-container>
+          <ng-container *ngIf="revvar==true"
+          [ngTemplateOutlet]="secondeme">
+
+       </ng-container>
+       <ng-container *ngIf="restvar==true"
+       [ngTemplateOutlet]="troisieme">
+
+    </ng-container>
+           </mat-sidenav-content>
+
+        </mat-sidenav-container>
+        <div class="h-auto bg-yellow- bg-coloré">
+
+        </div>
+
+      </div>
+      <!-- Aside contenant les produits et meilleurs ventes-->
+      <div>
+        <div class="bg-white h-lgm w-80 pl-8 rounded-md " >
+          <p class=" pt-3  w-44 pb-2 text-xl font-Poppins font-semibold text-black border-b-4 border-coloré">Meilleur Produit vendu</p>
+          <div class="flex flex-col pt-4 space-y-2">
+            <img src="../../assets/images/food78-258x200.jpeg" style="width: 258px ; height: 200px;" alt="">
+                  <div class="flex flex-col space-y-1">
+                      <div>
+                        <mat-icon>star_border</mat-icon>
+                        <mat-icon>star_border</mat-icon>
+                        <mat-icon>star_border</mat-icon>
+                        <mat-icon>star_border</mat-icon>
+                      </div>
+                    <p class="text-2xl text-black font-bold font-Source" >Spaghetti bolognaise</p>
+                    <p class="text-xl font-semibold pt-1 text-red-500 font-open">6500fcfa</p>
+                    <div class="flex space-x-2 pt-1">
+                      <img src="../../assets/images/map.png" alt="">
+                      <p class="font-Poppins text-lg text-gray-400">Street 5, Dakar-Plateux - 54000</p>
+                    </div>
+                  </div>
+          </div>
+          <div class="pt-5">
+            <button mat-stroked-button class="w-60
+            text-black text-xl  font-semibold  font-Poppins bg-coloré bg-opacity-90" >Order Now </button>
+          </div>
+
+        </div>
+        <!--Fin element concernant meilleur vente-->
+
+        <!--Debut caroussel produits -->
+        <div>
+          <div class="bg-white h-lgm w-80 pl-8 mt-16 rounded-md " >
+            <p class=" pt-3  w-44 pb-2 text-xl font-Poppins font-semibold text-black border-b-4 border-coloré">Nos Produits</p>
+            <div class="flex flex-col pt-4 space-y-2">
+              <img src="../../assets/images/food78-258x200.jpeg" style="width: 258px ; height: 200px;" alt="">
+                    <div class="flex flex-col space-y-1">
+                        <div>
+                          <mat-icon>star_border</mat-icon>
+                          <mat-icon>star_border</mat-icon>
+                          <mat-icon>star_border</mat-icon>
+                          <mat-icon>star_border</mat-icon>
+                        </div>
+                      <p class="text-2xl text-black font-bold font-Source" >Spaghetti bolognaise</p>
+                      <p class="text-xl font-semibold pt-1 text-red-500 font-open">6500fcfa</p>
+                      <div class="flex space-x-2 pt-1">
+                        <img src="../../assets/images/map.png" alt="">
+                        <p class="font-Poppins text-lg text-gray-400">Street 5, Dakar-Plateux - 54000</p>
+                      </div>
+                    </div>
+            </div>
+            <div class="pt-5">
+              <button mat-stroked-button class="w-60
+              text-black text-xl  font-semibold  font-Poppins bg-coloré bg-opacity-90" >Order Now </button>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!--Fin grand div concernant caroussel produits -->
+
+      </div>
+
+  </div>
+
+
+
+  <ng-template  #pardefaut >
+    <div class="pt-4 pl-6">
+      <div class="flex flex-col ">
+        <p class=" w-9 text-xl font-Poppins font-semibold text-black border-b-4 border-coloré ">Categories</p>
+        <div class=" flex space-x-4 pt-6 pr-3 justify-start">
+          <button mat-raised-button class="w-full bg-button text-white text-xl font-open font-bold  " >Spaghetti </button>
+          <button mat-raised-button class="w-full bg-button text-white text-xl font-open font-bold " >Burger </button>
+          <button mat-raised-button class="w-full bg-button text-white text-xl font-open font-bold " >Sandwich </button>
+        </div>
+        <p class=" w-10 text-xl font-Poppins pt-12 font-semibold text-black border-b-4 border-coloré ">Spaghetti</p>
+        <div class=" divide-y-2 divide-gray-300 divide-dotted">
+        <div class="h-full rounded-md pt-7 border-white ">
+          <div class="flex space-x-6 pt-5   rounded-md px-4">
+              <img src="../../assets/images/cheesy-pasta-150x150.jpg" alt="" style="width: 150px; height: 150px;">
+            <div class="flex flex-col space-y-2">
+              <p class="text-xl text-black font-bold font-Source ">Sausa Pasta</p>
+              <p class="text-lg font-open font-medium text-gray-500">Menu special a base de pate plus pain</p>
+              <p class="text-xl font-semibold text-red-500 font-open">5000 fcfa</p>
+            </div>
+          </div>
+          <div class="flex space-x-2 justify-end pr-4 pb-2">
+                    <input type="number" id="tentacles" name="quantite" placeholder="1"
+                      min="1" max="100" class="w-16" >
+                      <button mat-stroked-button class="w-52 text-black text-xl  font-semibold  font-Poppins bg-coloré bg-opacity-90" >Order Now </button>
+          </div>
+
+        </div>
+        <div class="h-full rounded-md pt-7 border-white ">
+          <div class="flex space-x-6 pt-5   rounded-md px-4">
+              <img src="../../assets/images/pasta567-150x150.jpeg" alt="" style="width: 150px; height: 150px;">
+            <div class="flex flex-col space-y-2">
+              <p class="text-xl text-black font-bold font-Source ">Cheesy Pasta</p>
+              <p class="text-lg font-open font-medium text-gray-500">Menu special a base de pate plus pain</p>
+              <p class="text-xl font-semibold text-red-500 font-open">5000 fcfa</p>
+            </div>
+          </div>
+          <div class="flex space-x-2 justify-end pb-2 pr-4">
+                    <input type="number" id="tentacles" name="quantite" placeholder="1"
+                      min="1" max="100" class="w-16 pl-2" >
+                      <button mat-stroked-button class="w-52 text-black text-xl  font-semibold  font-Poppins bg-coloré bg-opacity-90" >Order Now </button>
+          </div>
+
+        </div>
+        <div class="h-full rounded-md pt-7 border-white ">
+          <div class="flex space-x-6 pt-5   rounded-md px-4">
+              <img src="../../assets/images/speedy-sausage-pasta-150x150.jpg" alt="" style="width: 150px; height: 150px;">
+            <div class="flex flex-col space-y-2">
+              <p class="text-xl text-black font-bold font-Source ">Chicken cheese Pasta</p>
+              <p class="text-lg font-open font-medium text-gray-500">Menu special a base de pate plus pain</p>
+              <p class="text-xl font-semibold text-red-500 font-open">5000 fcfa</p>
+            </div>
+          </div>
+          <div class="flex space-x-2 justify-end pb-2 pr-4">
+                    <input type="number" id="tentacles" name="quantite" placeholder="10"
+                      min="1" max="100" class="w-16 pl-2" >
+                      <button mat-stroked-button class="w-52 text-black text-xl  font-semibold  font-Poppins bg-coloré bg-opacity-90" >Order Now </button>
+          </div>
+
+        </div>
+        <div class="h-full rounded-md pt-7 border-white ">
+          <div class="flex space-x-6 pt-5   rounded-md px-4">
+              <img src="../../assets/images/cheesy-pasta-150x150.jpg" alt="" style="width: 150px; height: 150px;">
+            <div class="flex flex-col space-y-2">
+              <p class="text-xl text-black font-bold font-Source ">Cheesy Pasta</p>
+              <p class="text-lg font-open font-medium text-gray-500">Menu special a base de pate plus pain</p>
+              <p class="text-xl font-semibold text-red-500 font-open">5000 fcfa</p>
+            </div>
+          </div>
+          <div class="flex space-x-2 justify-end pb-2 pr-4">
+                    <input type="number" id="tentacles" name="quantite" placeholder="1"
+                      min="1" max="100" class="w-16 pl-2" >
+                      <button mat-stroked-button class="w-52 text-black text-xl  font-semibold  font-Poppins bg-coloré bg-opacity-90" >Order Now </button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    </div>
+
+  </ng-template>
+
+  <ng-template #secondeme >
+
+  </ng-template>
+
+  <ng-template #troisieme >
+    <div>
+      <p class=" w-48 text-xl font-Poppins pt-9 font-semibold text-black border-b-4 border-coloré ">Restaurant Info</p>
+      <p class="text-lg font-open pt-7 font-medium text-gray-500">
+        What is Lorem Ipsum?
+    Lorem Ipsum is simply dummy
+    text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+    Why do we use it?
+  It is a long established
+  fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+
+
+  Where can I get some?
+   </p>
+    </div>
+    <div class="w-full pt-7">
+      <p class=" w-52 text-xl font-Poppins pt-9 font-semibold text-black border-b-4 border-coloré ">Ou sommes nous ? </p>
+    <iframe class=" pt-7" src="https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d30866.152526627095!2d-17.468058292773435!3d14.753865295639187!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e6!4m3!3m2!1d14.7544048!2d-17.4765555!4m0!5e0!3m2!1sfr!2ssn!4v1629662984215!5m2!1sfr!2ssn"
+    width="520" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+  </ng-template>
+
+
 </section>

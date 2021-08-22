@@ -5,6 +5,9 @@ import { StoreComponent } from './store/store.component';
 import { SingleproductComponent } from './singleproduct/singleproduct.component';
 import { RestaurantComponent } from './restaurant/restaurant.component';
 import { AllrestaurantComponent } from './allrestaurant/allrestaurant.component';
+import { MinReviewsComponent } from './min-reviews/min-reviews.component';
+import { RestInfoComponent } from './rest-info/rest-info.component';
+
 
 const routes: Routes = [
   {
@@ -22,11 +25,17 @@ const routes: Routes = [
   {
     path: 'allrestau', component: AllrestaurantComponent
   },
+
+  {
+    path: 'minreview', component: MinReviewsComponent
+  },
+  {
+    path: 'restinfo', component: RestInfoComponent
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-
 
 exports: [RouterModule]
 })

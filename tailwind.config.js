@@ -14,12 +14,23 @@ module.exports = {
         "how":"#FFCE67",
         "much":"#FDEDCA",
         "fond":"#FEFAF1",
+        "button":"#231900",
+        "coloré":"#FFCC00",
+        "back":"#f2f2f2"
       },fontFamily:{
         body:['Nunito'],
         Poppins:['Poppins,sans-serif'],
         Source:['"Source Sans Pro"'],
         open:['"Open Sans"']
       },
+      height: {
+        sm: '8px',
+        md: '16px',
+        lg: '24px',
+        lga:'531px',
+        lgm:'560px',
+        xl: '1300px',
+       }
 
     },
   },
