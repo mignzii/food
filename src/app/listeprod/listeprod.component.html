@@ -1,4 +1,4 @@
-<mat-sidenav-container class="sidenav-container"  style="background-color:#454d55;"   >
+<mat-sidenav-container class="sidenav-container" style="background-color:#454d55;">
   <mat-sidenav #drawer class="sidenav" fixedInViewport style="background-color:#343a40;"
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
@@ -6,7 +6,7 @@
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
       <a mat-list-item routerLink="/nav" >Home</a>
-      <a mat-list-item  routerLink="/produit" >Produits</a>
+      <a mat-list-item routerLink="/produit">Produits</a>
       <a mat-list-item href="#">Nos Restaurants</a>
       <a mat-list-item href="#">Commandes</a>
       <a mat-list-item href="#">Livreur</a>
@@ -23,14 +23,199 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>food</span>
+      <span>myfood</span>
+
+
     </mat-toolbar>
-    <div class=" px-5">
-      <h1 class=" pl-6 text-3xl underline font-Source font-medium pt-4 pb-1 ">Liste des  Produits</h1>
-        <h4 class=" pl-8 text-xl font-Source  font-medium py-2 " >ce tableau represente l'ensemble des produits enregistrés sur le site</h4>
+    <div class="pl-5 pt-4">
+      <h1 class="text-white font-medium text-3xl font-Poppins">
+        Dashboard</h1>
 
+         <!-- Le contenu du pop-u -->
+        <div id="ex1" class="modal" style="max-width: 700px;">
+          <div>
+            <p class="py-4 text-left text-xl font-medium pl-2">Ajouter Un Produit</p>
+            <div class="leading-loose">
+              <form class="p-10 bg-white rounded shadow-xl flex-col flex space-y-2">
+                  <div class="">
+                      <label class="block text-sm text-gray-600" for="name">Nom Article</label>
+                      <input class="w-full px-5 py-1 text-gray-700 bg-gray-200 rounded" id="name" name="name" type="text" required="" placeholder="" aria-label="Name">
+                  </div>
+                  <div class="">
+                      <label class="block text-sm text-gray-600" for="name">Restaurant </label>
+                      <input class="w-full px-5 py-1 text-gray-700 bg-gray-200 rounded" id="name" name="name" type="text" required="" placeholder="" aria-label="Name">
+                  </div>
+                  <div class="">
+                      <label class="block text-sm text-gray-600" for="name">Prix</label>
+                      <input class="w-full px-5 py-1 text-gray-700 bg-gray-200 rounded" id="name" name="name" type="text" required="" placeholder="" aria-label="Name">
+                  </div>
+                  <div class="">
+                    <label class="block text-sm text-gray-600" for="name">Quantite</label>
+                    <input class="w-full px-5 py-1 text-gray-700 bg-gray-200 rounded" id="name" name="name" type="text" required="" placeholder="" aria-label="Name">
+                </div>
+                <div class="">
+                  <label class="block text-sm text-gray-600" for="name">Statut</label>
+                  <input class="w-full px-5 py-1 text-gray-700 bg-gray-200 rounded" id="name" name="name" type="text" required="" placeholder="" aria-label="Name">
+              </div>
+                  <div class="">
+                      <label class="block text-sm text-gray-600" for="name">Image article</label>
+                      <input class="w-full px-5 py-1 text-gray-700 bg-gray-200 rounded" id="name" name="name" type="file" required="" placeholder="" aria-label="Name">
+                  </div>
+                  <div class="mt-2">
+                    <label class="block text-sm text-gray-600" for="name">Descriptionn</label>
+                     <textarea class="w-full px-5 py-1 text-gray-700 bg-gray-200 rounded" name="description" id="" cols="30" rows="10"></textarea>
+                  </div>
+
+                  <div class="mt-6">
+                      <button class="px-4 py-1 text-white font-light tracking-wider bg-gray-900 rounded" type="submit">Submit</button>
+                  </div>
+              </form>
+          </div>
+          </div>
+           <div class=" bg-bleu w-24 text-center rounded-lg text-white   "> <a href="#" rel="modal:close">Close</a></div>
+        </div>
+
+        <!-- Link to open the modal -->
+      <!--Ensemble des statistiques-->
+        <div class="bg-Nav-dash border-2 rounded-lg pl-4 mx-5 py-5 mt-2 flex justify-between ">
+          <div class="flex space-x-2 ">
+           <a href="#ex1" rel="modal:open" > <div class="bg-vert w-24 p-1 text-center text-xl flex items-center justify-center ">
+              <span class="material-icons ">
+                add
+                </span>
+              New
+            </div></a>
+            <a href=""><div class="bg-rouge w-14 text-center p-1">
+                <span class="material-icons">
+                  delete
+                  </span>
+              </div></a>
+          </div>
+          <div class="flex space-x-2 pr-5 ">
+            <div class="bg-bleu w-24 text-center text-xl flex items-center justify-center ">
+              <span class="material-icons ">
+                add
+                </span>
+              Import
+            </div>
+            <div class="bg-indigo-600 w-24 text-center text-xl flex items-center justify-center">
+              <span class="material-icons">
+                file_upload
+                </span>
+                export
+            </div>
+        </div>
+        </div>
+
+        <!-- les derniers commandes inventaire-->
+       <div class=" pt-4 shadow-2xl pr-3 ">
+          <table class="bg-Nav-dash  pt-4">
+            <caption class="bg-Nav-dash py-4 text-left text-xl font-medium pl-2 ">GESTION PRODUITS</caption>
+            <thead class=" border-2 border-Dash pt-4 border-solid ">
+              <tr class="w-full  border-b-4 border-Dash ">
+                <th class="px-3 w-64 py-3 font-serif leading-7 text-xl"><span class="material-icons">
+                  crop_3_2
+                  </span></th>
+                <th class="px-3 w-64 py-3 font-serif leading-7 text-xl">Nom</th>
+                <th class="px-3 w-64 py-3 font-serif leading-7 text-xl"> Image</th>
+                <th class="px-3 w-64 py-3 font-serif leading-7 text-xl"> Prix</th>
+                <th class="px-3 w-64 py-3 font-serif leading-7 text-xl"> Restaurant</th>
+                <th class="px-3 w-64 py-3 font-serif leading-7 text-xl"> Quantite</th>
+                <th class="px-3 w-64 py-3 font-serif leading-7 text-xl"> Statut</th>
+
+                <th class="px-3 w-64 py-3 font-serif leading-7 text-xl"> Options</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="w-full  border-b-2 border-Dash pb-2">
+                <th class="px-3 w-64 py-3 font-serif leading-7 text-xl"><span class="material-icons">
+                  crop_3_2
+                  </span></th>
+                <td class="px-4 py-3 text-bleu w-80 font-serif leading-7 text-xl" >Burger Maria</td>
+                <td  class="px-4 py-3 w-96 font-serif leading-7 text-xl"> <img src="../../assets/images/gallery_image6-min-768x768.jpg" class="shadow-2xl" width="100px" height="60px" alt=""></td>
+                <td  class="px-4 py-3 w-80 font-serif leading-7 text-xl">2500 fr </td>
+                <td  class="px-4 text-center py-3 w-96"> Chez Katia </td>
+                <td  class="px-6 py-3 text-center  w-80 font-serif leading-7 text-xl">8</td>
+                <td  class="px-6 text-center py-3 w-96"> <span class="bg-rouge bg-opacity-80 px-3  py-1 font-serif leading-7 text-xl rounded-full">Faible</span> </td>
+                <td class=""> <div class="flex justify-center items-center space-x-2"><a href=""> <span class="material-icons">edit</span></a> <a href=""><span class="material-icons">
+                  delete
+                  </span></a></div> </td>
+              </tr>
+              <tr class="w-full  border-b-2 border-Dash pb-2">
+                <th class="px-3 w-64 py-3 font-serif leading-7 text-xl"><span class="material-icons">
+                  crop_3_2
+                  </span></th>
+                <td class="px-4 py-3 text-bleu w-80 font-serif leading-7 text-xl" >Pizza de la margueria</td>
+                <td  class="px-4 py-3 w-96 font-serif leading-7 text-xl"> <img src="../../assets/images/p1.jpeg" class="shadow-2xl" width="100px" height="60px" alt=""></td>
+                <td  class="px-4 py-3 w-80 font-serif leading-7 text-xl">4250 fr </td>
+                <td  class="px-4 text-center py-3 w-96"> Terroubi Hotel </td>
+                <td  class="px-6 py-3 text-center  w-80 font-serif leading-7 text-xl">8</td>
+                <td  class="px-6 text-center py-3 w-96"> <span class="bg-jaune-clair bg-opacity-80 px-3 py-1 font-serif leading-7 text-xl rounded-full">Rupture de stock</span> </td>
+                <td class=""> <div class="flex justify-center items-center space-x-2"><a href=""> <span class="material-icons">edit</span></a> <a href=""><span class="material-icons">
+                  delete
+                  </span></a></div> </td>
+              </tr>
+              <tr class="w-full  border-b-2 border-Dash pb-2">
+                <th class="px-3 w-64 py-3 font-serif leading-7 text-xl"><span class="material-icons">
+                  crop_3_2
+                  </span></th>
+                <td class="px-4 py-3 text-bleu w-80 font-serif leading-7 text-xl" >Sandwich </td>
+                <td  class="px-4 py-3 w-96 font-serif leading-7 text-xl"> <img src="../../assets/images/res.jpeg" class="shadow-2xl" width="100px" height="60px" alt=""></td>
+                <td  class="px-4 py-3 w-80 font-serif leading-7 text-xl">2500 fr </td>
+                <td  class="px-4 text-center py-3 w-96"> Saint-Louis </td>
+                <td  class="px-6 py-3 text-center  w-80 font-serif leading-7 text-xl">256</td>
+                <td  class="px-6 text-center py-3 w-96"> <span class="bg-vert bg-opacity-80 px-4 py-1  font-serif leading-7 text-xl rounded-full">Disponible</span> </td>
+                <td class=""> <div class="flex justify-center items-center space-x-2"><a href=""> <span class="material-icons">edit</span></a> <a href=""><span class="material-icons">
+                  delete
+                  </span></a></div> </td>
+              </tr>
+              <tr class="w-full  border-b-2 border-Dash pb-2">
+                <th class="px-3 w-64 py-3 font-serif leading-7 text-xl"><span class="material-icons">
+                  crop_3_2
+                  </span></th>
+                <td class="px-4 py-3 text-bleu w-80 font-serif leading-7 text-xl" > Dibiterie </td>
+                <td  class="px-4 py-3 w-96 font-serif leading-7 text-xl"> <img src="../../assets/images/pr3.jpeg" class="shadow-2xl" width="100px" height="60px" alt=""></td>
+                <td  class="px-4 py-3 w-80 font-serif leading-7 text-xl">3500 fr </td>
+                <td  class="px-4 text-center py-3 w-80"> Dakar night-club </td>
+                <td  class="px-6 py-3 text-center  w-80 font-serif leading-7 text-xl">345</td>
+                <td  class="px-6 text-center py-3 w-96"> <span class="bg-bleu px-4 py-1 font-serif leading-7 text-xl rounded-full">stock faible</span> </td>
+                <td class=""> <div class="flex justify-center items-center space-x-2"><a href=""> <span class="material-icons">edit</span></a> <a href=""><span class="material-icons">
+                  delete
+                  </span></a></div> </td>
+              </tr>
+              <tr class="w-full  border-b-2 border-Dash pb-2">
+                <th class="px-3 w-64 py-3 font-serif leading-7 text-xl"><span class="material-icons">
+                  crop_3_2
+                  </span></th>
+                <td class="px-4 py-3 text-bleu w-80  font-serif leading-7 text-xl" >Lazagne</td>
+                <td  class="px-4 py-3 w-96 font-serif leading-7 text-xl"> <img src="../../assets/images/cheesy-pasta-150x150.jpg" class=" shadow-2xl " width="100px" height="60px" alt=""></td>
+                <td  class="px-4 py-3 w-80 font-serif leading-7 text-xl">4520 fr </td>
+                <td  class="px-4 text-center py-3 w-80"> Nice cream dalar </td>
+                <td  class="px-6 py-3 text-center  w-80 font-serif leading-7 text-xl">784</td>
+                <td  class="px-6 text-center py-3 w-80"> <span class=" px-4 py-1 bg-vert bg-opacity-80 font-serif leading-7 text-xl rounded-full">Disponible</span> </td>
+                <td class=""> <div class="flex justify-center items-center space-x-2"><a href=""> <span class="material-icons" >edit</span></a> <a href=""><span class="material-icons">
+                  delete
+                  </span></a></div> </td>
+              </tr>
+
+
+            </tbody>
+
+          </table>
+          <div>
+            <mat-paginator class="bg-Nav-dash" [length]="100"
+            [pageSize]="10"
+            [pageSizeOptions]="[5, 10, 25, 100]"
+            aria-label="Select page">
+            </mat-paginator>
+          </div>
+        </div>
+       <!-- Fin grid inventaire-->
     </div>
-
+    <div class="w-full  mt-5 py-3 pl-3 flex justify-between bg-Nav-dash h-16">
+     <p class="text-xl text-gray-400 "> copright  <span class="rounded-full border-white border px-1 ">C</span>  2021 <span class="text-bleu  ">Officis</span>.All rights reserved </p>
+     <p class="text-lg px-5 text-gray-400 ">Designed by freeinov</p>
+    </div>
 
   </mat-sidenav-content>
 </mat-sidenav-container>
