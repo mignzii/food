@@ -16,7 +16,14 @@ module.exports = {
         "fond":"#FEFAF1",
         "button":"#231900",
         "coloré":"#FFCC00",
-        "back":"#f2f2f2"
+        "back":"#f2f2f2",
+        "Dash":"#454d55",
+        "Nav-dash":"#343a40",
+        "bleu":"#3498db",
+        "rouge":"#e74c3c",
+        "vert":"#00bc8c",
+        "jaune":"#f39c12",
+        "jaune-clair":"#ffc107"
       },fontFamily:{
         body:['Nunito'],
         Poppins:['Poppins,sans-serif'],

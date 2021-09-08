@@ -7,6 +7,9 @@ import { RestaurantComponent } from './restaurant/restaurant.component';
 import { AllrestaurantComponent } from './allrestaurant/allrestaurant.component';
 import { MinReviewsComponent } from './min-reviews/min-reviews.component';
 import { RestInfoComponent } from './rest-info/rest-info.component';
+import { NavComponent } from './nav/nav.component';
+import { ListeprodComponent } from './listeprod/listeprod.component';
+
 
 
 const routes: Routes = [
@@ -14,8 +17,14 @@ const routes: Routes = [
     path: 'home', component: HomeComponent
   },
   {
+    path: 'nav', component: NavComponent
+  },
+
+
+  {
     path: 'store', component: StoreComponent
   },
+
   {
     path: 'single', component: SingleproductComponent
   },
@@ -30,12 +39,17 @@ const routes: Routes = [
     path: 'minreview', component: MinReviewsComponent
   },
   {
+    path: 'produit', component: ListeprodComponent
+  },
+  {
     path: 'restinfo', component: RestInfoComponent
   },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
+
+
 
 exports: [RouterModule]
 })

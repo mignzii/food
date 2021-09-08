@@ -20,6 +20,16 @@ import { SubbscribeComponent } from './subbscribe/subbscribe.component';
 import { MinReviewsComponent } from './min-reviews/min-reviews.component';
 import { RestInfoComponent } from './rest-info/rest-info.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { NavComponent } from './nav/nav.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
+import { MatMenuModule } from '@angular/material/menu';
+import { ListeprodComponent } from './listeprod/listeprod.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+
+
+
 
 
 @NgModule({
@@ -34,14 +44,19 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     AllrestaurantComponent,
     SubbscribeComponent,
     MinReviewsComponent,
-    RestInfoComponent
+    RestInfoComponent,
+    NavComponent,
+    ListeprodComponent,
+
+
   ],
   imports: [
     BrowserModule,MatTabsModule,
     AppRoutingModule,
-    BrowserAnimationsModule,MatToolbarModule,
+    BrowserAnimationsModule,FlexLayoutModule,
+    MatToolbarModule,
     CarouselModule,
-    MatSidenavModule,MatIconModule,MatListModule,MatButtonModule
+    MatSidenavModule,MatIconModule,MatListModule,MatButtonModule, LayoutModule, MatGridListModule, MatCardModule, MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]
