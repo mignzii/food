@@ -4,6 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatIconModule} from '@angular/material/icon';
 import {MatListModule} from '@angular/material/list';
 import {MatPaginatorModule} from '@angular/material/paginator';
@@ -28,6 +29,15 @@ import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { ListeprodComponent } from './listeprod/listeprod.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { RestoGestionComponent } from './resto-gestion/resto-gestion.component';
+import { CommandeComponent } from './commande/commande.component';
+import { LivreurComponent } from './livreur/livreur.component';
+import { RestoAdminComponent } from './resto-admin/resto-admin.component';
+import { RestoAdminProduitComponent } from './resto-admin-produit/resto-admin-produit.component';
+import { RestoAdminCommandeComponent } from './resto-admin-commande/resto-admin-commande.component';
+import { RestoAdminFactureComponent } from './resto-admin-facture/resto-admin-facture.component';
+import { RestoAdminInfoComponent } from './resto-admin-info/resto-admin-info.component';
+import { AdminInfoComponent } from './admin-info/admin-info.component';
 
 
 
@@ -48,6 +58,15 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     RestInfoComponent,
     NavComponent,
     ListeprodComponent,
+    RestoGestionComponent,
+    CommandeComponent,
+    LivreurComponent,
+    RestoAdminComponent,
+    RestoAdminProduitComponent,
+    RestoAdminCommandeComponent,
+    RestoAdminFactureComponent,
+    RestoAdminInfoComponent,
+    AdminInfoComponent,
 
 
   ],
@@ -57,7 +76,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     BrowserAnimationsModule,FlexLayoutModule,
     MatToolbarModule,
     CarouselModule,
-    MatSidenavModule,MatIconModule,MatListModule,MatButtonModule, LayoutModule,
+    MatSidenavModule,MatIconModule,MatListModule,MatButtonModule, LayoutModule,MatSlideToggleModule,
      MatGridListModule, MatCardModule, MatMenuModule,MatPaginatorModule
   ],
   providers: [],

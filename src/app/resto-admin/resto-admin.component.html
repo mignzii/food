@@ -5,10 +5,9 @@
       [opened]="(isHandset$ | async) === false">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item routerLink="/nav" >Home</a>
-      <a mat-list-item routerLink="/produit">Produits</a>
-      <a mat-list-item routerLink="/gestion-resto">Nos Restaurants</a>
-      <a mat-list-item routerLink="/commande">Commandes</a>
+      <a mat-list-item routerLink="/admin-resto" >Home</a>
+      <a mat-list-item routerLink="/admin-resto-produit">Produits</a>
+      <a mat-list-item routerLink="/admin-resto-commande">Commandes</a>
       <a mat-list-item routerLink="/livreur">Livreur</a>
       <a mat-list-item href="#">Client</a>
     </mat-nav-list>
@@ -64,7 +63,7 @@
           </div>
 
           <div class="flex flex-col space-y-2 ">
-            <p class="font-body font-light">Nos restaurants</p>
+            <p class="font-body font-light">Nos Produits </p>
             <p class="text-xl font-Poppins font-bold text-white ">195</p>
           </div>
         </div>
@@ -85,123 +84,7 @@
 
        <!-- Fin Ensemble des statistiques-->
 
-       <!-- grid  de l'inventaire-->
-       <div class="grid grid-cols-3 pt-8 gap-2">
-        <div class="col-span-2 py-3 bg-Nav-dash shadow-md ">
-            <div class="flex justify-between pl-2 pr-2 pt-2 bg-Nav-dash border-b-2 border-Dash pb-2  ">
-              <p class="text-white text-2xl font-medium font-body leading-5 ">Nos Derniers Restaurant et traiteurs</p>
-              <p class=" w-48  font-Source font-bold  rounded-md bg-rouge  ">15 Nouveaux membres </p>
-            </div>
-            <div class=" lg:grid-cols-4 grid-cols-2 grid gap-x-2 gap-y-3 py-4 pl-4  ">
-              <div class="flex flex-col space-y-1 ">
-                <img src="../../assets/images/resto2.jpg" alt="" class="rounded-full w-20 h-20 ">
-                <h3 class="font-Poppins font-medium text-xl text-gray-300">Chez Katia</h3>
-                <p class="font-Poppins font-light text-gray-500 text-lg">15/01/2021</p>
-
-              </div>
-              <div class="flex flex-col space-y-1 ">
-                <img src="../../assets/images/resto.jpg" alt="" class="rounded-full w-20 h-20 ">
-                <h3 class="font-Poppins font-medium text-xl text-gray-300">Gondolier</h3>
-                <p class="font-Poppins font-light text-gray-500 text-lg">15/06/2018</p>
-
-              </div>
-              <div class="flex flex-col space-y-1 ">
-                <img src="../../assets/images/r8.jpeg " alt="" class="rounded-full w-20 h-20 ">
-                <h3 class="font-Poppins font-medium text-xl text-gray-300">KFC Dakar</h3>
-                <p class="font-Poppins font-light text-gray-500 text-lg">15/01/2021</p>
-
-              </div>
-              <div class="flex flex-col space-y-1 ">
-                <img src="../../assets/images/r9.jpeg " alt="" class="rounded w-20 h-20 ">
-                <h3 class="font-Poppins font-medium text-xl text-gray-300">Tanos resto</h3>
-                <p class="font-Poppins font-light text-gray-500 text-lg">12/03/2021</p>
-
-              </div>
-              <div class="flex flex-col space-y-1 ">
-                <img src="../../assets/images/088.jpg" alt="" class="rounded-full w-20 h-20 ">
-                <h3 class="font-Poppins font-medium text-xl text-gray-300">Chez Katia</h3>
-                <p class="font-Poppins font-light text-gray-500 text-lg">04/01/2019</p>
-
-              </div>
-              <div class="flex flex-col space-y-1 ">
-                <img src="../../assets/images/p1.jpeg" alt="" class="rounded-full w-20 h-20 ">
-                <h3 class="font-Poppins font-medium text-xl text-gray-300">Swiss palace</h3>
-                <p class="font-Poppins font-light text-gray-500 text-lg">15/01/2021</p>
-
-              </div>
-              <div class="flex flex-col space-y-1 ">
-                <img src="../../assets/images/pr3.jpeg" alt="" class="rounded-full w-20 h-20 ">
-                <h3 class="font-Poppins font-medium text-xl text-gray-300">Nice cream</h3>
-                <p class="font-Poppins font-light text-gray-500 text-lg">15/05/2021</p>
-
-              </div>
-              <div class="flex flex-col space-y-1 ">
-                <img src="../../assets/images/pub2.jpeg" alt="" class="rounded-full w-20 h-20 ">
-                <h3 class="font-Poppins font-medium text-xl text-gray-300">Jet-café</h3>
-                <p class="font-Poppins font-light text-gray-500 text-lg">11/01/2019</p>
-
-              </div>
-            </div>
-            <a href=""><p class=" flex items-center bg-Nav-dash border-Dash border-2 py-2  justify-center leading-7 font-open font-bold text-bleu">View all users</p></a>
-        </div>
-
-        <!-- information supplementaire  de l'inventaire-->
-        <div class=" flex-col flex space-y-4 px-3 py-3">
-          <div class="w-full rounded-lg  shadow-md  px-4  h-20 bg-jaune-clair  ">
-            <div class="flex space-x-2 items-center">
-              <span class="material-icons flex items-start pt-3  " style="font-size: 55px;">
-                paid
-                </span>
-                <div class="flex flex-col flex-wrap pt-2 space-y-1">
-                  <p class="text-xl  font-Source font-semibold"> Articles Payés </p>
-                  <p class="text-lg text-gray-500 from-gray-300 font-light font-Poppins">1500</p>
-                </div>
-
-            </div>
-
-          </div>
-          <div class="w-full rounded-lg shadow-md  px-4  h-20 bg-vert  ">
-            <div class="flex space-x-3  items-center">
-              <span class="material-icons flex items-start pt-3  " style="font-size: 55px;">
-                local_shipping
-                </span>
-                <div class="flex flex-col pt-2 space-y-1">
-                  <p class="text-xl  font-Source font-semibold"> Articles Livrés </p>
-                  <p class="text-lg text-gray-500 from-gray-300 font-light font-Poppins">1745</p>
-                </div>
-
-            </div>
-          </div>
-          <div class="w-full rounded-lg shadow-md  px-4  h-20 bg-rouge  ">
-            <div class="flex space-x-2 items-center">
-              <span class="material-icons flex items-start pt-3  " style="font-size: 55px;">
-                local_offer
-                </span>
-                <div class="flex flex-col pt-2 space-y-1">
-                  <p class="text-xl  font-Source font-semibold"> Nos Promotions </p>
-                  <p class="text-lg text-gray-500 from-gray-300 font-light font-Poppins">1500</p>
-                </div>
-
-            </div>
-          </div>
-          <div class="w-full rounded-lg shadow-md  px-4  h-20 bg-bleu  ">
-            <div class="flex space-x-2 items-center">
-              <span class="material-icons flex items-start pt-3  " style="font-size: 55px;">
-                paid
-                </span>
-                <div class="flex flex-col pt-2 space-y-1">
-                  <p class="text-xl  font-Source font-semibold"> Articles Payés </p>
-                  <p class="text-lg text-gray-500 from-gray-300 font-light font-Poppins">1500</p>
-                </div>
-
-            </div>
-          </div>
-        </div>
-
-        <!-- fin information supllementaire  de l'inventaire-->
-       </div>
-       <!-- Fin grid inventaire-->
-        <!-- les derniers commandes inventaire-->
+    <!-- les derniers commandes inventaire-->
        <div class="grid grid-cols-3 pt-4 gap-3">
         <div class=" grid col-span-2 ">
 
@@ -211,7 +94,7 @@
               <tr class="w-full  border-b-4 border-Dash ">
                 <th class="px-5 w-80 py-3 font-serif leading-7 text-lg">ID Commande</th>
                 <th class="px-5 w-64 py-3 font-serif leading-7 text-lg">Article</th>
-                <th class="px-5 w-64 py-3 font-serif leading-7 text-lg"> Restaurant</th>
+                <th class="px-5 w-64 py-3 font-serif leading-7 text-lg"> Livraison</th>
                 <th class="px-5 w-64 py-3 font-serif leading-7 text-lg"> Status</th>
                 <th class="px-2 w-64 py-3 font-serif leading-7 text-lg"> Reviews</th>
               </tr>
@@ -220,7 +103,7 @@
               <tr class="w-full  border-b-2 border-Dash pb-2">
                 <td class="px-6 py-3 text-bleu w-80 font-serif leading-7 text-lg" >AD1254</td>
                 <td  class="px-6 py-3 w-96 font-serif leading-7 text-lg"> Mariage</td>
-                <td  class="px-6 py-3 w-80 font-serif leading-7 text-lg">Traiteur </td>
+                <td  class="px-6 py-3 w-80 font-serif leading-7 text-lg">Dakar Nord </td>
                 <td  class="px-6 text-center py-3 w-80"> <span class="bg-bleu px-2 py-1 font serif leading-7 text-lg rounded-full">En Preparation</span> </td>
                 <td  class="px-8 py-3 text-center  w-80 font-serif leading-7 text-lg">8</td>
 
@@ -229,7 +112,7 @@
               <tr class="w-full  border-b-2 border-Dash pt-2">
                 <td class="px-6 py-3 text-bleu w-80 font-serif leading-7 text-lg" >15478</td>
                 <td  class="px-6 py-3 w-96 font-serif leading-7 text-lg">Brochette de viande</td>
-                <td  class="px-6 py-3 w-80 font-serif leading-7 text-lg">Chez Alioune</td>
+                <td  class="px-6 py-3 w-80 font-serif leading-7 text-lg">Sacre Coeur</td>
                 <td  class="px-6 text-center py-3 w-80"> <span class="bg-jaune-clair px-2 py-1 font serif leading-7 text-lg rounded-full">En Commande</span> </td>
                 <td  class="px-8 py-3 text-center w-80 font-serif leading-7 text-lg">8</td>
 
@@ -238,14 +121,14 @@
               <tr class="w-full  border-b-2 border-Dash pt-2">
                 <td class="px-6 py-3 text-bleu  w-80 font-serif leading-7 text-lg" >SFD45</td>
                 <td  class="px-6 py-3 w-96 font-serif leading-7 text-lg">poulet pané</td>
-                <td  class="px-6 py-3  w-80 font-serif leading-7 text-lg"> Pullman</td>
+                <td  class="px-6 py-3  w-80 font-serif leading-7 text-lg"> Liberte 6 ext</td>
                 <td  class="px-6 text-center py-3 w-80"> <span class="bg-rouge px-10 font py-1 serif leading-7 text-lg rounded-full">Livré</span> </td>
                 <td  class="px-8 py-3 text-center w-80 font-serif leading-7 text-lg">74</td>
               </tr>
               <tr class="w-full  border-b-2 border-Dash pt-2">
                 <td class="px-6 py-3 text-bleu  w-80 font-serif leading-7 text-lg" >EFD634</td>
                 <td  class="px-6 py-3 w-96 font-serif leading-7 text-lg">Sandwich mini</td>
-                <td  class="px-6 py-3  w-80 font-serif leading-7 text-lg">Teranga</td>
+                <td  class="px-6 py-3  w-80 font-serif leading-7 text-lg">Patte D'oir Builders</td>
                 <td  class="px-6 text-center py-3 w-80"> <span class="bg-vert px-4 font py-1 serif leading-7 text-lg rounded-full">En attente</span> </td>
                 <td  class="px-8 py-3 text-center w-80 font-serif leading-7 text-lg">98</td>
               </tr>

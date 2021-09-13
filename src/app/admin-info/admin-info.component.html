@@ -1,0 +1,189 @@
+<mat-sidenav-container class="sidenav-container" style="background-color:#ffffff;">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport style="background-color:#343a40;"
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/nav" >Home</a>
+      <a mat-list-item routerLink="/produit">Produits</a>
+      <a mat-list-item routerLink="/gestion-resto">Nos Restaurants</a>
+      <a mat-list-item routerLink="/commande">Commandes</a>
+      <a mat-list-item routerLink="/livreur">Livreur</a>
+      <a mat-list-item href="#">Client</a>
+
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar style="background-color:#343a40;" >
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>myfood</span>
+
+
+    </mat-toolbar>
+    <div class="pl-5 pt-4 text-black">
+      <h1 class="text-black font-medium text-3xl font-Poppins">
+        Facture</h1>
+        <div class="grid grid-cols-3 pt-2" >
+          <div class=" col-span-1 bg-gris ">
+            <h1 class=" text-2xl font-serif px-2 font-bold leading-8 py-3" >Recents Commandes </h1>
+                    <div class="  w-80 mx-auto">
+                      <div class=" flex space-x-3 py-1  mb-6 px-5 bg-white bg-opacity-70 rounded-lg shadow" >
+                        <div class="w-28 text-xl px-2 py-1 text-white font-Poppins
+                          text-center rounded-lg bg-mauve  " >
+                          Nouveaux
+                        </div>
+                        <div class="w-28 px-2 py-1 font-Poppins">
+                          Preparation
+                        </div>
+                        <div class="w-28 px-2 py-1 font-Poppins" >Livrer
+
+                        </div>
+                      </div>
+                    </div>
+
+                  <div class="flex flex-col space-y-2 px-7">
+                            <div class=" px-2 flex justify-between rounded-lg mt-2 bg-white shadow-lg ">
+                              <div class="flex flex-col py-6 space-y-2" >
+                                <h1 class="text-xl font-Poppins">Commande #00145</h1>
+                                <div class="flex space-x-1" >
+                                  <span class="material-icons">
+                                    watch_later
+                                    </span>
+                                    <p class="text-lg text-gray-500 font-light font-Poppins">Bientot Pret</p>
+                                </div>
+                              </div>
+                                <p class="font-bold font-Poppins text-2xl pt-4 ">21500 fcfa</p>
+
+                          </div>
+                          <div class=" px-2 flex justify-between rounded-lg mt-2 border-mauve border-l-8 cursor-pointer bg-white shadow-lg ">
+                              <div class="flex flex-col py-6 space-y-2" >
+                                <h1 class="text-xl font-Poppins">Commande #485145</h1>
+                                <div class="flex space-x-1" >
+                                  <span class="material-icons">
+                                    watch_later
+                                    </span>
+                                    <p class="text-lg text-gray-500 font-light font-Poppins">Bientot Pret</p>
+                                </div>
+                              </div>
+                                <p class="font-bold font-Poppins  text-2xl pt-4 ">25000 fcfa</p>
+
+                          </div>
+                        <div class=" px-2 flex justify-between rounded-lg mt-2 bg-white shadow-lg ">
+                          <div class="flex flex-col py-6 space-y-2" >
+                            <h1 class="text-xl font-Poppins">Commande #00145</h1>
+                            <div class="flex space-x-1" >
+                              <span class="material-icons">
+                                watch_later
+                                </span>
+                                <p class="text-lg text-gray-500 font-light font-Poppins">Today 11h</p>
+                            </div>
+                          </div>
+                            <p class="font-bold font-Poppins text-2xl pt-4 ">2000 fcfa</p>
+
+                      </div>
+                      <div class=" px-2 flex justify-between rounded-lg mt-2 bg-white shadow-lg ">
+                        <div class="flex flex-col py-6 space-y-2" >
+                          <h1 class="text-xl font-Poppins">Commande #15480</h1>
+                          <div class="flex space-x-1" >
+                            <span class="material-icons">
+                              watch_later
+                              </span>
+                              <p class="text-lg text-gray-500 font-light font-Poppins">Today 12h00</p>
+                          </div>
+                        </div>
+                          <p class="font-bold font-Poppins text-2xl pt-4 ">11500 fcfa</p>
+
+                      </div>
+                </div>
+            </div>
+            <!--Detail facture-->
+            <div class="col-span-2">
+              <div class="  mx-2 flex justify-between items-end  bg-gris h-24">
+                <div class="p-3 flex-col flex space-y-1">
+                <h1 class="text-2xl text-mauve font-bold font-Poppins ">Nouvelles Commandes</h1>
+                <h3 class="text-lg text-gray-400 font-light font-Poppins ">une nouvelle commande a recemment été passé</h3>
+              </div>
+              <p class=" text-lg  text-gray-500 font-normal font-Poppins pb-2 pr-3">Teranga Hotel Senegal </p>
+              </div>
+              <div class="mx-3 mt-4">
+               <p class="text-xl font-bold font-Poppins ">DETAIL COMMANDE</p>
+               <div class="py-2 flex space-x-2 justify-around px-4 divide-x-4 ">
+                    <div class="flex flex-col pt-3  space-y-1">
+                      <p class="font-Poppins text-gray-400 font-light text-base ">Temps de Preparation</p>
+                      <p class=" font-normal font-Poppins text-xl   ">00h:25mn:30s</p>
+                    </div>
+                    <div class="flex flex-col pl-3 space-y-1">
+                      <p class="font-Poppins text-gray-400 font-light text-base ">Adresse </p>
+                      <p class=" font-normal font-Poppins text-xl   ">Patte d'oie Builders </p>
+                    </div>
+                    <div class="flex flex-col pl-3 space-y-1">
+                      <p class="font-Poppins text-gray-400 font-light text-base ">Telephone </p>
+                      <p class=" font-normal font-Poppins text-xl   ">762430964</p>
+                    </div>
+               </div>
+              </div>
+              <table class=" mx-2 font-Poppins  pt-4">
+                <thead class="  ">
+                  <tr class="w-full   ">
+                    <th class="px-3 w-64 py-3 font-serif leading-7 text-xl"> </th>
+                    <th class="px-3 w-64 py-3 font-serif leading-7 text-xl"> </th>
+                    <th class="px-3 w-64 py-3 font-serif leading-7 text-xl"> </th>
+                    <th class="px-3 w-64 py-3 font-serif leading-7 text-xl"> </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="w-full  border-b-2 border-gray-300 pb-2">
+                    <td  class="px-2 py-3 w-96 font-serif leading-7 text-xl"> <img src="../../assets/images/gallery_image6-min-768x768.jpg" class="shadow-2xl" width="100px" height="60px" alt=""></td>
+                    <td  class="px-2 py-3 w-80 font-serif leading-7 text-xl">x2 </td>
+                    <td  class="px-2 text-center py-3 w-96"> Sans Ketchup </td>
+                    <td  class="px-4 py-3 text-center  w-80 font-serif leading-7 text-xl">2500 fr</td>
+                  </tr>
+                  <tr class="w-full  border-b-2 border-gray-300 pb-2">
+                    <td  class="px-2 py-3 w-96 font-serif leading-7 text-xl"> <img src="../../assets/images/p1.jpeg" class="shadow-2xl" width="100px" height="60px" alt=""></td>
+                    <td  class="px-2 py-3 w-80 font-serif leading-7 text-xl">x4 </td>
+                    <td  class="px-2 text-center py-3  w-96"> Sans Mayonnaise </td>
+                    <td  class="px-4 py-3 text-center  w-80 font-serif leading-7 text-xl">9500 fr </td>
+
+                  </tr>
+                  <tr class="w-full  border-b-2 border-gray-300 pb-2">
+                    <td  class="px-2 py-3 w-96 font-serif leading-7 text-xl"> <img src="../../assets/images/p1.jpeg" class="shadow-2xl" width="100px" height="60px" alt=""></td>
+                    <td  class="px-2 py-3 w-80 font-serif leading-7 text-xl">x1 </td>
+                    <td  class="px-2 text-center py-3 w-96"> Sans Mayonnaise </td>
+                    <td  class="px-4 py-3 text-center  w-80 font-serif leading-7 text-xl">14500 fr </td>
+
+                  </tr>
+                  <tr class="w-full  border-b-2 border-gray-300 pb-2">
+                    <td  class="px-2 py-3 w-96 font-serif leading-7 text-xl"> <img src="../../assets/images/p1.jpeg" class="shadow-2xl" width="100px" height="60px" alt=""></td>
+                    <td  class="px-2 py-3 w-80 font-serif leading-7 text-xl">x1 </td>
+                    <td  class="px-2 text-center py-3 w-96">  </td>
+                    <td  class="px-4 py-3 text-center  w-80 font-serif leading-7 text-xl">14500 fr </td>
+
+                  </tr>
+
+                </tbody>
+
+              </table>
+              <div class="pt-2 flex flex-col space-y-6 pr-5 items-end">
+              <p class="text-2xl text-black font-Poppins ">146.000 fcfa</p>
+              <button style="width: 250px; height:60px ; background-color:orange ; " mat-raised-button color="">Valider commande</button>
+            </div>
+            </div>
+            <!-- Fin Detail -->
+      </div>
+
+    </div>
+    <div class="w-full  mt-5 py-3 pl-3 flex justify-between bg-Nav-dash h-16">
+     <p class="text-xl text-gray-400 "> copright  <span class="rounded-full border-white border px-1 ">C</span>  2021 <span class="text-bleu  ">Officis</span>.All rights reserved </p>
+     <p class="text-lg px-5 text-gray-400 ">Designed by freeinov</p>
+    </div>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>

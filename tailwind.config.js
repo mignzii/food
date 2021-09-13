@@ -23,7 +23,9 @@ module.exports = {
         "rouge":"#e74c3c",
         "vert":"#00bc8c",
         "jaune":"#f39c12",
-        "jaune-clair":"#ffc107"
+        "jaune-clair":"#ffc107",
+        "mauve":"#3958CD",
+        "gris":"#F8F8FA",
       },fontFamily:{
         body:['Nunito'],
         Poppins:['Poppins,sans-serif'],

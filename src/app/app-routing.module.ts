@@ -9,6 +9,14 @@ import { MinReviewsComponent } from './min-reviews/min-reviews.component';
 import { RestInfoComponent } from './rest-info/rest-info.component';
 import { NavComponent } from './nav/nav.component';
 import { ListeprodComponent } from './listeprod/listeprod.component';
+import { RestoGestionComponent } from './resto-gestion/resto-gestion.component';
+import { CommandeComponent } from './commande/commande.component';
+import { LivreurComponent } from './livreur/livreur.component';
+import { RestoAdminComponent } from './resto-admin/resto-admin.component';
+import { RestoAdminProduitComponent } from './resto-admin-produit/resto-admin-produit.component';
+import { RestoAdminFactureComponent } from './resto-admin-facture/resto-admin-facture.component';
+import { AdminInfoComponent } from './admin-info/admin-info.component';
+import { RestoAdminCommandeComponent } from './resto-admin-commande/resto-admin-commande.component';
 
 
 
@@ -19,7 +27,30 @@ const routes: Routes = [
   {
     path: 'nav', component: NavComponent
   },
-
+  {
+    path: 'admin-resto', component: RestoAdminComponent
+  },
+  {
+    path: 'admin-resto-produit', component: RestoAdminProduitComponent
+  },
+  {
+    path: 'admin-resto-commande', component: RestoAdminCommandeComponent
+  },
+  {
+    path: 'resto-facture', component: RestoAdminFactureComponent
+  },
+  {
+    path: 'facture', component: AdminInfoComponent
+  },
+  {
+    path: 'gestion-resto', component: RestoGestionComponent
+  },
+  {
+    path: 'commande', component: CommandeComponent
+  },
+  {
+    path: 'livreur', component: LivreurComponent
+  },
 
   {
     path: 'store', component: StoreComponent
@@ -48,8 +79,6 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-
-
 
 exports: [RouterModule]
 })

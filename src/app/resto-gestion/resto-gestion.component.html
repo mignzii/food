@@ -10,6 +10,7 @@
       <a mat-list-item routerLink="/gestion-resto">Nos Restaurants</a>
       <a mat-list-item routerLink="/commande">Commandes</a>
       <a mat-list-item routerLink="/livreur">Livreur</a>
+      <a mat-list-item href="#">Client</a>
 
     </mat-nav-list>
   </mat-sidenav>
@@ -29,20 +30,72 @@
     </mat-toolbar>
     <div class="pl-5 pt-4">
       <h1 class="text-white font-medium text-3xl font-Poppins">
-        Dashboard</h1>
+        RESTAURANTS & TRAITEURS</h1>
+
+        <div class="flex  justify-around items-center space-y-2  flex-wrap py-5">
+          <div class="bg-Nav-dash flex pl-2 py-4 items-center space-x-2 h-20 w-72 rounded-md shadow-lg ">
+            <div class="w-28 h-16 pl-2  bg-bleu rounded-md ">
+              <span class="material-icons flex items-center pt-2 justify-center " style="font-size: 48px;">
+                shopping_cart
+                </span>
+            </div>
+
+            <div class="flex flex-col space-y-2">
+              <p class="font-light font-body">Ventes</p>
+              <p class="text-xl font-Poppins font-bold text-white ">1000</p>
+            </div>
+          </div>
+          <div class="bg-Nav-dash flex pl-2 py-4 items-center space-x-2 h-20 w-72 rounded-md shadow-lg ">
+            <div class="w-28 h-16 pl-2 rounded-md bg-rouge " >
+              <span class="material-icons flex items-center pt-2 justify-center" style="font-size: 48px;">
+                thumb_up
+                </span>
+            </div>
+
+            <div class="flex flex-col space-y-2">
+              <p class="font-body font-light">Likes</p>
+              <p class="text-xl font-Poppins font-bold text-white ">15640</p>
+            </div>
+          </div>
+          <div class="bg-Nav-dash flex pl-2 py-4 items-center space-x-2 h-20 w-72 rounded-md shadow-lg ">
+            <div class="w-28 bg-vert pl-2 h-16 rounded-md ">
+              <span class="material-icons  pt-2 flex  items-center justify-center" style="font-size: 48px;">
+                shopping_bag
+                </span>
+            </div>
+
+            <div class="flex flex-col space-y-2 ">
+              <p class="font-body font-light">Nos restaurants</p>
+              <p class="text-xl font-Poppins font-bold text-white ">195</p>
+            </div>
+          </div>
+          <div class="bg-Nav-dash flex pl-2 py-4 items-center space-x-2 h-20 w-72 rounded-md shadow-lg ">
+            <div class="w-28 pl-2  bg-jaune h-16 rounded-md ">
+              <span class="material-icons pt-2 flex items-center justify-center" style="font-size: 48px;">
+                groups
+                </span>
+            </div>
+
+            <div class="flex flex-col space-y-2">
+              <p class="font-body font-light" >Actifs</p>
+              <p class="text-xl font-Poppins font-bold text-white ">100</p>
+            </div>
+          </div>
+
+        </div>
 
          <!-- Le contenu du pop-u -->
         <div id="ex1" class="modal" style="max-width: 700px;">
           <div>
-            <p class="py-4 text-left text-xl font-medium pl-2">Ajouter Un Produit</p>
+            <p class="py-4 text-left text-xl font-medium pl-2">Ajouter Un Restaurant</p>
             <div class="leading-loose">
               <form class="p-10 bg-white rounded shadow-xl flex-col flex space-y-2">
                   <div class="">
-                      <label class="block text-sm text-gray-600" for="name">Nom Article</label>
+                      <label class="block text-sm text-gray-600" for="name">Nom </label>
                       <input class="w-full px-5 py-1 text-gray-700 bg-gray-200 rounded" id="name" name="name" type="text" required="" placeholder="" aria-label="Name">
                   </div>
                   <div class="">
-                      <label class="block text-sm text-gray-600" for="name">Restaurant </label>
+                      <label class="block text-sm text-gray-600" for="name"> </label>
                       <input class="w-full px-5 py-1 text-gray-700 bg-gray-200 rounded" id="name" name="name" type="text" required="" placeholder="" aria-label="Name">
                   </div>
                   <div class="">
@@ -55,10 +108,10 @@
                 </div>
                 <div class="">
                   <label class="block text-sm text-gray-600" for="name">Statut</label>
-                  <input class="w-full px-5 py-1 text-gray-700 bg-gray-200 rounded" id="name" name="name" type="text" required="" placeholder="" aria-label="Name">
+                  <input class="w-full px-5 py-1 text-gray-700 bg-gray-200 rounded" id="name" name="name" type="checkbox" required="" placeholder="" aria-label="Name">
               </div>
                   <div class="">
-                      <label class="block text-sm text-gray-600" for="name">Image article</label>
+                      <label class="block text-sm text-gray-600" for="name">Image Restaurant</label>
                       <input class="w-full px-5 py-1 text-gray-700 bg-gray-200 rounded" id="name" name="name" type="file" required="" placeholder="" aria-label="Name">
                   </div>
                   <div class="mt-2">
@@ -110,7 +163,7 @@
         <!-- les derniers commandes inventaire-->
        <div class=" pt-4 shadow-2xl pr-3 ">
           <table class="bg-Nav-dash  pt-4">
-            <caption class="bg-Nav-dash py-4 text-left text-xl font-medium pl-2 ">GESTION PRODUITS</caption>
+            <caption class="bg-Nav-dash py-4 text-left text-xl font-medium pl-2 ">GESTION RESTAURANTS</caption>
             <thead class=" border-2 border-Dash pt-4 border-solid ">
               <tr class="w-full  border-b-4 border-Dash ">
                 <th class="px-3 w-64 py-3 font-serif leading-7 text-xl"><span class="material-icons">
@@ -118,11 +171,9 @@
                   </span></th>
                 <th class="px-3 w-64 py-3 font-serif leading-7 text-xl">Nom</th>
                 <th class="px-3 w-64 py-3 font-serif leading-7 text-xl"> Image</th>
-                <th class="px-3 w-64 py-3 font-serif leading-7 text-xl"> Prix</th>
-                <th class="px-3 w-64 py-3 font-serif leading-7 text-xl"> Restaurant</th>
-                <th class="px-3 w-64 py-3 font-serif leading-7 text-xl"> Quantite</th>
+                <th class="px-3 w-64 py-3 font-serif leading-7 text-xl"> Nombre de Produits</th>
+                <th class="px-3 w-64 py-3 font-serif leading-7 text-xl"> Produits Vendus</th>
                 <th class="px-3 w-64 py-3 font-serif leading-7 text-xl"> Statut</th>
-
                 <th class="px-3 w-64 py-3 font-serif leading-7 text-xl"> Options</th>
               </tr>
             </thead>
@@ -131,12 +182,11 @@
                 <th class="px-3 w-64 py-3 font-serif leading-7 text-xl"><span class="material-icons">
                   crop_3_2
                   </span></th>
-                <td class="px-4 py-3 text-bleu w-80 font-serif leading-7 text-xl" >Burger Maria</td>
-                <td  class="px-4 py-3 w-96 font-serif leading-7 text-xl"> <img src="../../assets/images/gallery_image6-min-768x768.jpg" class="shadow-2xl" width="100px" height="60px" alt=""></td>
-                <td  class="px-4 py-3 w-80 font-serif leading-7 text-xl">2500 fr </td>
-                <td  class="px-4 text-center py-3 w-96"> Chez Katia </td>
-                <td  class="px-6 py-3 text-center  w-80 font-serif leading-7 text-xl">8</td>
-                <td  class="px-6 text-center py-3 w-96"> <span class="bg-rouge bg-opacity-80 px-3  py-1 font-serif leading-7 text-xl rounded-full">Faible</span> </td>
+                <td class="px-4 py-3 text-bleu w-80 font-serif leading-7 text-xl" >KFC DAKAR</td>
+                <td  class="px-4 py-3 w-96 font-serif leading-7 text-xl"> <img src="../../assets/images/088.jpg" class="shadow-2xl" width="100px" height="60px" alt=""></td>
+                <td  class="px-4 py-3 w-80 font-serif text-center leading-7 text-xl">2500 </td>
+                <td  class="px-4 text-center py-3 w-96"> 415 </td>
+                <td> <mat-slide-toggle class="" color="warn" >Activer </mat-slide-toggle> </td>
                 <td class=""> <div class="flex justify-center items-center space-x-2"><a href=""> <span class="material-icons">edit</span></a> <a href=""><span class="material-icons">
                   delete
                   </span></a></div> </td>
@@ -146,11 +196,10 @@
                   crop_3_2
                   </span></th>
                 <td class="px-4 py-3 text-bleu w-80 font-serif leading-7 text-xl" >Pizza de la margueria</td>
-                <td  class="px-4 py-3 w-96 font-serif leading-7 text-xl"> <img src="../../assets/images/p1.jpeg" class="shadow-2xl" width="100px" height="60px" alt=""></td>
-                <td  class="px-4 py-3 w-80 font-serif leading-7 text-xl">4250 fr </td>
-                <td  class="px-4 text-center py-3 w-96"> Terroubi Hotel </td>
-                <td  class="px-6 py-3 text-center  w-80 font-serif leading-7 text-xl">8</td>
-                <td  class="px-6 text-center py-3 w-96"> <span class="bg-jaune-clair bg-opacity-80 px-3 py-1 font-serif leading-7 text-xl rounded-full">Rupture de stock</span> </td>
+                <td  class="px-4 py-3 w-96 font-serif leading-7 text-xl"> <img src="../../assets/images/resto.jpg" class="shadow-2xl" width="100px" height="60px" alt=""></td>
+                <td  class="px-4 py-3 w-80 font-serif text-center leading-7 text-xl">42500  </td>
+                <td  class="px-4 text-center py-3 w-96"> 4785 </td>
+                <td> <mat-slide-toggle class="" color="warn" >Activer </mat-slide-toggle> </td>
                 <td class=""> <div class="flex justify-center items-center space-x-2"><a href=""> <span class="material-icons">edit</span></a> <a href=""><span class="material-icons">
                   delete
                   </span></a></div> </td>
@@ -159,12 +208,11 @@
                 <th class="px-3 w-64 py-3 font-serif leading-7 text-xl"><span class="material-icons">
                   crop_3_2
                   </span></th>
-                <td class="px-4 py-3 text-bleu w-80 font-serif leading-7 text-xl" >Sandwich </td>
-                <td  class="px-4 py-3 w-96 font-serif leading-7 text-xl"> <img src="../../assets/images/res.jpeg" class="shadow-2xl" width="100px" height="60px" alt=""></td>
-                <td  class="px-4 py-3 w-80 font-serif leading-7 text-xl">2500 fr </td>
-                <td  class="px-4 text-center py-3 w-96"> Saint-Louis </td>
-                <td  class="px-6 py-3 text-center  w-80 font-serif leading-7 text-xl">256</td>
-                <td  class="px-6 text-center py-3 w-96"> <span class="bg-vert bg-opacity-80 px-4 py-1  font-serif leading-7 text-xl rounded-full">Disponible</span> </td>
+                <td class="px-4 py-3 text-bleu w-80 font-serif leading-7 text-xl" >Teroubi </td>
+                <td  class="px-4 py-3 w-96 font-serif leading-7 text-xl"> <img src="../../assets/images/resto2.jpg" class="shadow-2xl" width="100px" height="60px" alt=""></td>
+                <td  class="px-4 py-3 w-80 font-serif text-center leading-7 text-xl"> 3522 </td>
+                <td  class="px-4 text-center py-3 w-96"> 459 </td>
+                <td> <mat-slide-toggle class="" color="warn" >Activer </mat-slide-toggle> </td>
                 <td class=""> <div class="flex justify-center items-center space-x-2"><a href=""> <span class="material-icons">edit</span></a> <a href=""><span class="material-icons">
                   delete
                   </span></a></div> </td>
@@ -175,10 +223,9 @@
                   </span></th>
                 <td class="px-4 py-3 text-bleu w-80 font-serif leading-7 text-xl" > Dibiterie </td>
                 <td  class="px-4 py-3 w-96 font-serif leading-7 text-xl"> <img src="../../assets/images/pr3.jpeg" class="shadow-2xl" width="100px" height="60px" alt=""></td>
-                <td  class="px-4 py-3 w-80 font-serif leading-7 text-xl">3500 fr </td>
-                <td  class="px-4 text-center py-3 w-80"> Dakar night-club </td>
-                <td  class="px-6 py-3 text-center  w-80 font-serif leading-7 text-xl">345</td>
-                <td  class="px-6 text-center py-3 w-96"> <span class="bg-bleu px-4 py-1 font-serif leading-7 text-xl rounded-full">stock faible</span> </td>
+                <td  class="px-4 py-3 w-80 font-serif text-center leading-7 text-xl">3500 </td>
+                <td  class="px-4 text-center py-3 w-80"> 145 </td>
+                <td> <mat-slide-toggle class="" color="warn" >Activer </mat-slide-toggle> </td>
                 <td class=""> <div class="flex justify-center items-center space-x-2"><a href=""> <span class="material-icons">edit</span></a> <a href=""><span class="material-icons">
                   delete
                   </span></a></div> </td>
@@ -189,10 +236,9 @@
                   </span></th>
                 <td class="px-4 py-3 text-bleu w-80  font-serif leading-7 text-xl" >Lazagne</td>
                 <td  class="px-4 py-3 w-96 font-serif leading-7 text-xl"> <img src="../../assets/images/cheesy-pasta-150x150.jpg" class=" shadow-2xl " width="100px" height="60px" alt=""></td>
-                <td  class="px-4 py-3 w-80 font-serif leading-7 text-xl">4520 fr </td>
-                <td  class="px-4 text-center py-3 w-80"> Nice cream dalar </td>
-                <td  class="px-6 py-3 text-center  w-80 font-serif leading-7 text-xl">784</td>
-                <td  class="px-6 text-center py-3 w-80"> <span class=" px-4 py-1 bg-vert bg-opacity-80 font-serif leading-7 text-xl rounded-full">Disponible</span> </td>
+                <td  class="px-4 py-3 w-80 font-serif leading-7 text-center text-xl">4520 </td>
+                <td  class="px-4 text-center py-3 w-80"> 321 </td>
+                <td> <mat-slide-toggle class="" color="warn" >Activer </mat-slide-toggle> </td>
                 <td class=""> <div class="flex justify-center items-center space-x-2"><a href=""> <span class="material-icons" >edit</span></a> <a href=""><span class="material-icons">
                   delete
                   </span></a></div> </td>
