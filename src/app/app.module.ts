@@ -38,6 +38,8 @@ import { RestoAdminCommandeComponent } from './resto-admin-commande/resto-admin-
 import { RestoAdminFactureComponent } from './resto-admin-facture/resto-admin-facture.component';
 import { RestoAdminInfoComponent } from './resto-admin-info/resto-admin-info.component';
 import { AdminInfoComponent } from './admin-info/admin-info.component';
+import { CartComponent } from './cart/cart.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 
 
@@ -67,6 +69,8 @@ import { AdminInfoComponent } from './admin-info/admin-info.component';
     RestoAdminFactureComponent,
     RestoAdminInfoComponent,
     AdminInfoComponent,
+    CartComponent,
+    CheckoutComponent,
 
 
   ],

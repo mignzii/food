@@ -17,7 +17,8 @@ import { RestoAdminProduitComponent } from './resto-admin-produit/resto-admin-pr
 import { RestoAdminFactureComponent } from './resto-admin-facture/resto-admin-facture.component';
 import { AdminInfoComponent } from './admin-info/admin-info.component';
 import { RestoAdminCommandeComponent } from './resto-admin-commande/resto-admin-commande.component';
-
+import { CartComponent } from './cart/cart.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 
 const routes: Routes = [
@@ -26,6 +27,12 @@ const routes: Routes = [
   },
   {
     path: 'nav', component: NavComponent
+  },
+  {
+    path: 'cart', component: CartComponent
+  },
+  {
+    path: 'checkout', component: CheckoutComponent
   },
   {
     path: 'admin-resto', component: RestoAdminComponent

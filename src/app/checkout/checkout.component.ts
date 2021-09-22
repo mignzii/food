@@ -1,11 +1,11 @@
-import { Component, OnInit , HostListener } from '@angular/core';
+import { Component, OnInit,HostListener } from '@angular/core';
 
 @Component({
-  selector: 'app-singleproduct',
-  templateUrl: './singleproduct.component.html',
-  styleUrls: ['./singleproduct.component.css']
+  selector: 'app-checkout',
+  templateUrl: './checkout.component.html',
+  styleUrls: ['./checkout.component.css']
 })
-export class SingleproductComponent implements OnInit {
+export class CheckoutComponent implements OnInit {
   navbarfixed:boolean=false;
   @HostListener('window:scroll',['$event']) onscroll(){
     if(window.scrollY > 400){
@@ -15,7 +15,6 @@ export class SingleproductComponent implements OnInit {
       this.navbarfixed=false
     }
   }
-
   constructor() { }
 
   ngOnInit(): void {

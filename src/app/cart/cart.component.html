@@ -1,0 +1,111 @@
+<header class="w-full h-auto bg-no-repeat bg-cover bg-center " style="background-image:url('../../assets/images/banner.png');">
+  <div class="w-full  h-lgm  ">
+
+          <nav class="flex navbar  w-full h-36   pl-8" (scroll)="onscroll()" [ngClass]="navbarfixed?'fixed':'notfixed'" >
+              <ul class="flex  items-center justify-between space-x-4 absolute  left-28">
+                  <li class="text-lg font-bold hover: cursor-pointer border-b-2 border-red-500 text-white font-open py-4" >Home</li>
+                  <li class="text-lg font-bold hover: cursor-pointer  border-b-2 border-red-500 text-white font-open py-4">Menu</li>
+                  <li class="text-lg font-bold hover: cursor-pointer border-b-2 border-red-500 text-white font-open py-4">SHOP</li>
+                  <li class="text-lg font-bold hover: cursor-pointer border-b-2  border-red-500 text-white font-open py-4">Contact</li>
+                  <img src="../../assets/images/logo.png" class=" px-64 " alt="">
+                  <button mat-raised-button color="warn" style="border-radius: 20px;height: 50px; width: 320px; font-size: larger; " >Reserver en ligne </button>
+                  <span class="material-icons px-20 " style="color: white;">
+                    shopping_cart
+                    </span>
+
+                </ul>
+          </nav>
+
+  </div>
+
+      <div class="text-8xl absolute top-72 left-96  font-Poppins font-semibold  px-32  text-white">Produits</div>
+
+</header>
+<section class="w-full h-auto  px-16 py-20 ">
+  <div class=" h-auto px-16 py-20 shadow-lg outline-black border-solid border-gray-800   ">
+    <div class="px-3  py-4" >
+      <table class=" pt-4">
+
+        <thead class=" border-2 border-gray-200 pt-4 border-solid ">
+          <tr class="w-full  border-b-2 border-grey-200 ">
+            <th class="px-5 border-r-2 border-grey-200 w-80 py-3 "></th>
+            <th class="px-5 border-r-2 border-grey-200 w-64 py-3 "></th>
+            <th class="px-5 border-r-2 border-grey-200 w-64 py-3 text-gray-400 font-bold font-serif leading-7 text-lg"> Produit</th>
+            <th class="px-5 border-r-2 border-grey-200 w-64 py-3 text-gray-400 font-serif font-bold leading-7 text-lg"> Prix</th>
+            <th class="px-2 border-r-2 border-grey-200 w-64 py-3 text-gray-400 font-serif font-bold leading-7 text-lg"> Quantité </th>
+            <th class="px-2 border-r-2 border-grey-200 w-64 py-3 text-gray-400 font-serif font-bold leading-7 text-lg"> Sous-Total</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr class="w-full  border-2 border-gray-200 pt-2">
+            <td class="px-6 py-3  border-r-2 border-grey-200  w-80 " ><span class="material-icons" style="color: red;">
+              close
+              </span></td>
+            <td  class="px-6 py-3 border-r-2 w-96 border-grey-200 "><img src="../../assets/images/gallery_image1-min-768x768.jpg " width="45px" height="45px" alt="">  </td>
+            <td  class="px-6 py-3 border-r-2 w-80 border-grey-200   font-serif leading-7 text-lg"> Hamburger Grand Format </td>
+            <td  class="px-6 text-center border-r-2 border-grey-200  py-3 w-80"> 5200fr </td>
+            <td  class="px-8 py-3 text-center border-r-2 border-grey-200  w-80 ">
+              <input type="number" id="tentacles" name="quantite" placeholder="1"
+                      min="5" max="100" class="w-16" >
+            </td>
+            <td  class="px-8 py-3 text-center border-r-2 border-grey-200  w-80 font-serif leading-7 text-lg">7400</td>
+          </tr>
+          <tr>
+            <tr class="w-full  border-2 border-gray-200 pt-2">
+              <td class="px-6 py-3  border-r-2 border-grey-200  w-80 " ><span class="material-icons" style="color: red;">
+                close
+                </span></td>
+              <td  class="px-6 py-3 border-r-2 w-96 border-grey-200 "><img src="../../assets/images/gallery_image4-min.jpg " width="45px" height="45px" alt="">  </td>
+              <td  class="px-6 py-3 border-r-2 w-80 border-grey-200   font-serif leading-7 text-lg"> Hamburger chez Joe  </td>
+              <td  class="px-6 text-center border-r-2 border-grey-200  py-3 w-80"> 3500fr </td>
+              <td  class="px-8 py-3 text-center border-r-2 border-grey-200  w-80 ">
+                <input type="number" id="tentacles" name="quantite" placeholder="1"
+                        min="5" max="100" class="w-16" >
+              </td>
+              <td  class="px-8 py-3 text-center border-r-2 border-grey-200  w-80 font-serif leading-7 text-lg">7900</td>
+            </tr>
+            <tr>
+            <td colspan="6" class="w-full  border-2 border-grey-200 pt-2"  >
+             <div class="px-4 text-right py-2">
+              <button mat-raised-button color="warn" style="border-radius: 20px;height: 50px; width: 250px; font-size: larger; " >Mettre à Jour la carte</button>
+             </div>
+            </td>
+          </tr>
+
+
+        </tbody>
+
+      </table>
+    </div>
+    <div class="flex pt-4 justify-end">
+      <div class="w-2/4 border-gray-300  border-2 flex flex-col space-y-7  px-3 ">
+          <p class="text-2xl  font-bold py-2 "> Achat Total</p>
+          <div class=" border-2 border-gray-200 py-3 divide-y-4 divide-gray-200   ">
+            <div class="flex justify-between font-Poppins text-lg text-gray-400 font-semibold py-4 px-4 ">
+              <p class="">Sous Total</p>
+              <p class="font-normal">45000 fr</p>
+            </div>
+            <div class="flex justify-between font-Poppins text-lg text-gray-400 font-semibold pt-3 px-4 ">
+              <p>Livraison</p>
+              <div class="flex flex-col  space-y-3">
+                <p class="text-right font-normal">45000 fr</p>
+                <p class="pb-2 font-normal">Patte D'oie Builders *</p>
+              </div>
+
+            </div>
+            <div class="flex font-Poppins text-lg text-gray-400 font-semibold pt-4 justify-between px-4 ">
+              <p class="">Total</p>
+              <p class="font-normal">19500  fr</p>
+            </div>
+
+          </div>
+          <div class="px-4 text-right py-3">
+            <button mat-raised-button color="warn" style="border-radius: 20px;height: 50px; width: 250px; font-size: larger; " >Payez Maintenant </button>
+           </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<app-footer></app-footer>

@@ -1,21 +1,27 @@
-<header class="w-full h-auto">
-  <div class="w-full h-96 py-72 relative  bg-no-repeat bg-cover bg-center" style="background-image:url('../../assets/images/banner.png');">
-      <div>
-          <nav class="flex pt-24 pl-6">
-              <ul class="flex items-center justify-between space-x-4 absolute top-20 left- left-28">
+<header class="w-full h-auto bg-no-repeat bg-cover bg-center " style="background-image:url('../../assets/images/banner.png');">
+  <div class="w-full  h-lgm  ">
+
+          <nav class="flex navbar  w-full h-36   pl-8" (scroll)="onscroll()" [ngClass]="navbarfixed?'fixed':'notfixed'" >
+              <ul class="flex  items-center justify-between space-x-4 absolute  left-28">
                   <li class="text-lg font-bold hover: cursor-pointer border-b-2 border-red-500 text-white font-open py-4" >Home</li>
                   <li class="text-lg font-bold hover: cursor-pointer  border-b-2 border-red-500 text-white font-open py-4">Menu</li>
                   <li class="text-lg font-bold hover: cursor-pointer border-b-2 border-red-500 text-white font-open py-4">SHOP</li>
                   <li class="text-lg font-bold hover: cursor-pointer border-b-2  border-red-500 text-white font-open py-4">Contact</li>
-              </ul>
-          </nav>
-          <div>
+                  <img src="../../assets/images/logo.png" class=" px-64 " alt="">
+                  <button mat-raised-button color="warn" style="border-radius: 20px;height: 50px; width: 320px; font-size: larger; " >Reserver en ligne </button>
+                  <span class="material-icons px-20 " style="color: white;">
+                    shopping_cart
+                    </span>
 
-          </div>
-          <div></div>
-      </div>
+                </ul>
+          </nav>
+
   </div>
+
+      <div class="text-8xl absolute top-72 left-96  font-Poppins font-semibold  px-32  text-white">Produits</div>
+
 </header>
+
 
 <section class=" w-full h-auto pt-20 ">
   <div class=" flex space-x-9 pl-16 pr-4 w-full">
